@@ -10,4 +10,5 @@ Config files for neovim
 * [Desktop and editor setup for Rust development](https://www.youtube.com/watch?v=ycMiMDHopNc)
 * [Neovim and Rust](https://sharksforarms.dev/posts/neovim-rust/)
 * [Neovim - Convert init.vim to init.lua (Live)][https://www.youtube.com/watch?v=BoDU6QOmEOY]
+* [Getting started using Lua in Neovim](https://github.com/nanotee/nvim-lua-guide)
 
