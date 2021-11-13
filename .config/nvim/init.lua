@@ -1,4 +1,5 @@
 require('plugins')
+require('config/keybindings')
 
 require('monokai')
 vim.cmd('colorscheme monokai')
