@@ -35,14 +35,18 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
   -- cmp LSP completion
   use 'hrsh7th/cmp-nvim-lsp'
+  -- cmp LUA completion
+  --use 'hrsh7th/cmp-nvim-lua'
   -- cmp Snippet completion
   use 'hrsh7th/cmp-vsnip'
   -- cmp Path completion
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-cmdline'
   -- See hrsh7th other plugins for more great completion sources!
   -- Snippet engine
   use 'hrsh7th/vim-vsnip'
+  use 'hrsh7th/vim-vsnip-integ'
 
   -- Show function signature when you type
   use "ray-x/lsp_signature.nvim"

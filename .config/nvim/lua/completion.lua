@@ -42,14 +42,14 @@ cmp.setup.cmdline('/', {
   }
 })
 
---- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
--- cmp.setup.cmdline(':', {
---  sources = cmp.config.sources({
---    { name = 'path' }
---  }, {
---    { name = 'cmdline' }
---  })
---})
+-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline(':', {
+ sources = cmp.config.sources({
+   { name = 'path' }
+ }, {
+   { name = 'cmdline' }
+ })
+})
 
 -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
 local capabilities = vim.lsp.protocol.make_client_capabilities()
