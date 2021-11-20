@@ -1,8 +1,6 @@
 require('plugins')
 require('config/keybindings')
-
-require('monokai')
-vim.cmd('colorscheme monokai')
+require('config/colorscheme')
 
 require('completion')
 require('lsp')
