@@ -12,6 +12,9 @@ vim.opt.completeopt = {"menuone","noinsert","noselect"}
 -- Avoid showing extra messages when using completion
 vim.opt.shortmess:append('c')
 
+-- Run rustfmt automatically when saving a buffer
+vim.g.rustfmt_autosave = 1
+
 local opts = {
     tools = { -- rust-tools options
         autoSetHints = true,
