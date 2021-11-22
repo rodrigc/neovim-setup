@@ -9,7 +9,7 @@ Config files for neovim
 ## Further resources
 * [Desktop and editor setup for Rust development](https://www.youtube.com/watch?v=ycMiMDHopNc)
 * [Neovim and Rust](https://sharksforarms.dev/posts/neovim-rust/)
-* [Neovim - Convert init.vim to init.lua (Live)][https://www.youtube.com/watch?v=BoDU6QOmEOY]
+* [Neovim - Convert init.vim to init.lua (Live)](https://www.youtube.com/watch?v=BoDU6QOmEOY)
 * [Getting started using Lua in Neovim](https://github.com/nanotee/nvim-lua-guide)
 * [nvim-treesitter - Tree Sitter in Neovim](https://www.youtube.com/watch?v=LPXH7cBN_u8)
 * [TreeSitter playground](https://tree-sitter.github.io/tree-sitter/playground)
