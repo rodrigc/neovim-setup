@@ -80,6 +80,9 @@ return require('packer').startup(function()
     config = function() require('nvim-tree').setup({}) end
    }
 
+   -- commentary
+   use 'tpope/vim-commentary'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
