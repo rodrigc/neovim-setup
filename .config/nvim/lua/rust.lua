@@ -15,6 +15,8 @@ vim.opt.shortmess:append('c')
 -- Run rustfmt automatically when saving a buffer
 vim.g.rustfmt_autosave = 1
 
+local lsp = require('lsp')
+
 local opts = {
     tools = { -- rust-tools options
         autoSetHints = true,
@@ -31,7 +33,9 @@ local opts = {
     -- see https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#rust_analyzer
     server = {
         -- on_attach is a callback called when the language server attachs to the buffer
-        -- on_attach = on_attach,
+        on_attach = lsp.on_attach,
+        capabilities = lsp.capabilities,
+
         settings = {
             -- to enable rust-analyzer settings visit:
             -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc

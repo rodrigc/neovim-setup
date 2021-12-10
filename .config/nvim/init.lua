@@ -3,7 +3,8 @@ require('config/keybindings')
 require('config/colorscheme')
 
 require('completion')
-require('lsp')
+
+require('go')
 require('rust') 
 
 require('config/telescope')
