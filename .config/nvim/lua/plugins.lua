@@ -53,12 +53,12 @@ return require('packer').startup(function()
 
   -- Syntactic language support
   -- Rust
-  use 'rust-lang/rust.vim'
+  -- use 'rust-lang/rust.vim'
   -- To enable more of the features of rust-analyzer, such as inlay hints and more!
   -- See: https://sharksforarms.dev/posts/neovim-rust/
   use 'simrat39/rust-tools.nvim'
   -- Go
-  use 'fatih/vim-go'
+  -- use 'fatih/vim-go'
 
   -- Optional dependencies
   use 'nvim-lua/popup.nvim'
@@ -66,6 +66,7 @@ return require('packer').startup(function()
   use 'nvim-telescope/telescope.nvim'
   use {'nvim-telescope/telescope-fzf-native.nvim', run='make'}
   use 'nvim-telescope/telescope-media-files.nvim'
+  use 'nvim-telescope/telescope-ui-select.nvim'
 
   -- Debugging (needs plenary from above as well) 
   use 'mfussenegger/nvim-dap'
