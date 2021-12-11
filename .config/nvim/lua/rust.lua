@@ -17,6 +17,11 @@ vim.g.rustfmt_autosave = 1
 
 local lsp = require('lsp')
 
+local home = '/Users/crodrigues/'
+local extension_path = home .. '.vscode/extensions/vadimcn.vscode-lldb-1.6.10/'
+local codelldb_path = extension_path .. 'adapter/codelldb'
+local liblldb_path = extension_path .. 'lldb/lib/liblldb.dylib'
+
 local opts = {
     tools = { -- rust-tools options
         autoSetHints = true,
@@ -26,6 +31,12 @@ local opts = {
             parameter_hints_prefix = "",
             other_hints_prefix = "",
         },
+    },
+
+    -- debugging stuff
+    dap = {
+        adapter = require('rust-tools.dap').get_codelldb_adapter(
+            codelldb_path, liblldb_path)
     },
 
     -- all the opts to send to nvim-lspconfig
