@@ -2,7 +2,7 @@
 Config files for neovim
 
 ## Instructions
-1.  Install neovim v0.5.1
+1.  Install neovim v0.5.1+
 2.  Copy the .config/nvim directory from this repository to $HOME/.config/nvim
     directory on your system.
 
@@ -11,7 +11,9 @@ Config files for neovim
 On macOS:
 
 1.  `brew install homebrew/cask-fonts/font-hack-nerd-font`
-2.  In iTerm2, `Preferences -> Text -> Use a different font for non-ASCII text -> Hack Nerd Font Mono`
+2.  `brew install font-fira-code-nerd-font`
+3.  `brew install font-fira-mondo-nerd-font`
+4.  In iTerm2, `Preferences -> Text -> Use a different font for non-ASCII text -> Hack Nerd Font Mono`
 
 ## Further resources
 * [Desktop and editor setup for Rust development](https://www.youtube.com/watch?v=ycMiMDHopNc)
