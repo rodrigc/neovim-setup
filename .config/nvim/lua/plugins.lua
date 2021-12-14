@@ -13,7 +13,10 @@ return require('packer').startup(function()
   use 'tanvirtin/monokai.nvim'
 
   -- nvim-treesitter
-  use 'nvim-treesitter/nvim-treesitter'
+  use {
+       'nvim-treesitter/nvim-treesitter',
+       run = ':TSUpdate'
+  }
 
   -- Asynchronous Linter (ale)
   use 'dense-analysis/ale'
