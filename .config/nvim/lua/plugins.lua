@@ -62,6 +62,7 @@ return require('packer').startup(function()
   use 'simrat39/rust-tools.nvim'
   -- Go
   -- use 'fatih/vim-go'
+  use 'ray-x/go.nvim'
 
   -- Optional dependencies
   use 'nvim-lua/popup.nvim'

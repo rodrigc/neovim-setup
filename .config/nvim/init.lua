@@ -6,7 +6,7 @@ require('config/lualine')
 
 require('completion')
 
-require('go')
+require('config/go')
 require('rust') 
 
 require('config/telescope')
