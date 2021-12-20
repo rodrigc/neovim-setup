@@ -75,7 +75,11 @@ return require('packer').startup(function()
   use 'mfussenegger/nvim-dap'
 
   -- GUI enhancements 
-  use 'itchyny/lightline.vim'
+ -- use 'itchyny/lightline.vim'
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true},
+  }
 
    -- Tree browser
    use {
@@ -91,6 +95,8 @@ return require('packer').startup(function()
         require('Comment').setup()
     end
    }
+
+  -- use 'dstein64/vim-startuptime'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
