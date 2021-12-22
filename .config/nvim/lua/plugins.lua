@@ -97,6 +97,9 @@ return require('packer').startup(function()
     end
    }
 
+   -- nicer UI for notifications
+   use 'rcarriga/nvim-notify'
+
   -- use 'dstein64/vim-startuptime'
 
   -- Automatically set up your configuration after cloning packer.nvim
