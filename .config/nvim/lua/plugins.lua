@@ -74,6 +74,8 @@ return require('packer').startup(function()
 
   -- Debugging (needs plenary from above as well) 
   use 'mfussenegger/nvim-dap'
+  use 'rcarriga/nvim-dap-ui'
+  use 'theHamsta/nvim-dap-virtual-text'
 
   -- GUI enhancements 
  -- use 'itchyny/lightline.vim'
