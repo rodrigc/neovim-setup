@@ -76,6 +76,7 @@ return require('packer').startup(function()
   use 'mfussenegger/nvim-dap'
   use 'rcarriga/nvim-dap-ui'
   use 'theHamsta/nvim-dap-virtual-text'
+  use 'ray-x/guihua.lua'
 
   -- GUI enhancements 
  -- use 'itchyny/lightline.vim'
