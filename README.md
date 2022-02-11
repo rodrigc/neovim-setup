@@ -5,6 +5,8 @@ Config files for neovim
 1.  Install neovim v0.5.1+
 2.  Copy the .config/nvim directory from this repository to $HOME/.config/nvim
     directory on your system.
+3.  When starting neovim for the first time, run [:PackerSync](https://github.com/wbthomason/packer.nvim#quickstart) to download and update plugins.
+    Quit neovim, and restart it to load all the plugins.
 
 ## Fonts
 
