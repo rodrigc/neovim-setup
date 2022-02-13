@@ -11,3 +11,4 @@ require('config/go')
 require('rust') 
 
 require('config/telescope')
+require('config/options')
