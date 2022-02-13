@@ -16,3 +16,6 @@ vim.api.nvim_set_keymap('n', '<S-up>',  ":resize -2<CR>", { noremap = true, sile
 vim.api.nvim_set_keymap('n', '<S-down>',  ":resize +2<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<S-left>',  ":vertical resize -2<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<S-right>',  ":vertical resize +2<CR>", { noremap = true, silent = true })
+
+-- Open terminal inside new window
+vim.api.nvim_set_keymap('n', '<Leader>tt',  ":vnew|terminal<CR>", { noremap = true, silent = true })
