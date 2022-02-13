@@ -25,3 +25,4 @@ On macOS:
 * [nvim-treesitter - Tree Sitter in Neovim](https://www.youtube.com/watch?v=LPXH7cBN_u8)
 * [TreeSitter playground](https://tree-sitter.github.io/tree-sitter/playground)
 * [simrat39 dotfiles](https://github.com/simrat39/dotfiles/tree/master/.config/nvim)
+* [Managing Vim Splits](https://www.youtube.com/watch?v=Zir28KFCSQw)
