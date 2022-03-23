@@ -8,7 +8,9 @@ require('config/lualine')
 require('completion')
 
 require('config/go')
-require('rust') 
+require('config/python')
+require('rust')
+require('config/ruby')
 
 require('config/telescope')
 require('config/options')
