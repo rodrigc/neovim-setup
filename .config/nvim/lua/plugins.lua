@@ -103,7 +103,12 @@ return require('packer').startup(function()
    -- nicer UI for notifications
    use 'rcarriga/nvim-notify'
 
-  -- use 'dstein64/vim-startuptime'
+   -- use 'dstein64/vim-startuptime'
+
+   -- markdown preview
+   use {
+    'davidgranstrom/nvim-markdown-preview'
+   } 
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
