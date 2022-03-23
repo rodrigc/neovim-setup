@@ -105,6 +105,12 @@ return require('packer').startup(function()
 
    -- use 'dstein64/vim-startuptime'
 
+   -- database integration
+   use {
+    'kristijanhusak/vim-dadbod-ui',
+    requires = 'tpope/vim-dadbod'
+   }
+
    -- markdown preview
    use {
     'davidgranstrom/nvim-markdown-preview'
