@@ -30,6 +30,7 @@ return require('packer').startup(function()
 
   -- Semantic language support
   -- Collection of common configurations for the Nvim LSP client
+  use 'williamboman/nvim-lsp-installer'
   use 'neovim/nvim-lspconfig'
   -- Extensions to built-in LSP, for example, providing type inlay hints
   use 'nvim-lua/lsp_extensions.nvim'
