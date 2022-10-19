@@ -13,7 +13,8 @@ vim.opt.completeopt = {"menuone","noinsert","noselect"}
 vim.opt.shortmess:append('c')
 
 -- Run rustfmt automatically when saving a buffer
-vim.g.rustfmt_autosave = 1
+--vim.g.rustfmt_autosave = 1
+vim.g.rustfmt_options = "--edition 2021"
 
 local lsp = require('lsp')
 
@@ -63,6 +64,6 @@ local opts = {
     },
 }
 
-require('rust-tools').setup(opts)
+require('rust-tools').setup({})
 
-
+vim.api.nvim_exec([[ autocmd BufWritePre *.rs :silent! lua vim.lsp.buf.formatting_sync(nil, 10000) ]], false)
