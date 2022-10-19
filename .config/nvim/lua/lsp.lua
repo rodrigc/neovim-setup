@@ -30,7 +30,7 @@ local on_attach = function(client, bufnr)
   -- Get signatures (and _only_ signatures) when in argument lists.
   --
   require("lsp_signature").on_attach({
-    doc_lines = 0,
+    doc_lines = 10,
   })
 end
 
