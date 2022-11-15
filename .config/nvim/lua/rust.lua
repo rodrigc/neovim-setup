@@ -12,8 +12,6 @@ vim.opt.completeopt = {"menuone","noinsert","noselect"}
 -- Avoid showing extra messages when using completion
 vim.opt.shortmess:append('c')
 
--- Run rustfmt automatically when saving a buffer
---vim.g.rustfmt_autosave = 1
 vim.g.rustfmt_options = "--edition 2021"
 
 local lsp = require('lsp')
@@ -25,13 +23,6 @@ local liblldb_path = extension_path .. 'lldb/lib/liblldb.dylib'
 
 local opts = {
     tools = { -- rust-tools options
-        autoSetHints = true,
-        hover_with_actions = true,
-        inlay_hints = {
-            show_parameter_hints = false,
-            parameter_hints_prefix = "",
-            other_hints_prefix = "",
-        },
     },
 
     -- debugging stuff
@@ -45,8 +36,8 @@ local opts = {
     -- see https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#rust_analyzer
     server = {
         -- on_attach is a callback called when the language server attachs to the buffer
-        on_attach = lsp.on_attach,
-        capabilities = lsp.capabilities,
+        --on_attach = lsp.on_attach,
+        --capabilities = lsp.capabilities,
 
         settings = {
             -- to enable rust-analyzer settings visit:
@@ -57,13 +48,19 @@ local opts = {
                 },
                 -- enable clippy on save
                 checkOnSave = {
-                    command = "clippy"
+                    command = "cargo clippy"
                 },
             }
         }
     },
 }
 
-require('rust-tools').setup({})
+require('rust-tools').setup(opts)
 
-vim.api.nvim_exec([[ autocmd BufWritePre *.rs :silent! lua vim.lsp.buf.formatting_sync(nil, 10000) ]], false)
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.rs",
+  callback = function()
+   vim.lsp.buf.formatting_sync(nil, 200)
+  end,
+  group = format_sync_grp,
+})
