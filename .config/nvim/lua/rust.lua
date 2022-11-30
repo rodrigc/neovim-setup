@@ -48,7 +48,7 @@ local opts = {
                 },
                 -- enable clippy on save
                 checkOnSave = {
-                    command = "cargo clippy"
+                    command = "clippy"
                 },
             }
         }
@@ -57,10 +57,11 @@ local opts = {
 
 require('rust-tools').setup(opts)
 
+local format_sync_grp = vim.api.nvim_create_augroup("Format", {})
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*.rs",
   callback = function()
-   vim.lsp.buf.formatting_sync(nil, 200)
+   vim.lsp.buf.format({ timeout_ms = 200 })
   end,
   group = format_sync_grp,
 })
