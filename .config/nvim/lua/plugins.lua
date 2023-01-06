@@ -61,6 +61,9 @@ return require('packer').startup(function()
   -- To enable more of the features of rust-analyzer, such as inlay hints and more!
   -- See: https://sharksforarms.dev/posts/neovim-rust/
   use 'simrat39/rust-tools.nvim'
+  -- RustPlay support
+  use 'mattn/webapi-vim'
+
   -- Go
   -- use 'fatih/vim-go'
   use 'ray-x/go.nvim'
