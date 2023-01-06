@@ -14,7 +14,7 @@ vim.opt.shortmess:append('c')
 
 vim.g.rustfmt_options = "--edition 2021"
 
-local lsp = require('lsp')
+local lsp = require('config/lsp')
 
 local home = '/Users/crodrigues/'
 local extension_path = home .. '.vscode/extensions/vadimcn.vscode-lldb-1.6.10/'

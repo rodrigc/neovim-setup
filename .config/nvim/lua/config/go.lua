@@ -1,4 +1,4 @@
-local lsp = require('lsp')
+local lsp = require('config/lsp')
 
 require('go').setup({lsp_cfg = true, lsp_on_attach = lsp.on_attach})
 

@@ -9,8 +9,9 @@ require('completion')
 
 require('config/go')
 require('config/python')
-require('rust')
+require('config/rust')
 require('config/ruby')
+require('config/terraform')
 
 require('config/telescope')
 require('config/options')
