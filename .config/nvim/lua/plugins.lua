@@ -120,6 +120,16 @@ return require('packer').startup(function()
     'davidgranstrom/nvim-markdown-preview'
    } 
 
+   use {
+    'Equilibris/nx.nvim',
+    requires = {
+        'nvim-telescope/telescope.nvim',
+    },
+    config = function()
+        require("nx").setup {}
+    end
+   }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
