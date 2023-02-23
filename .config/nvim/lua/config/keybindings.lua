@@ -19,3 +19,7 @@ vim.keymap.set('n', '<S-right>',  ":vertical resize +2<CR>", { silent = true })
 
 -- Open terminal inside new window
 vim.keymap.set('n', '<Leader>tt',  ":vnew|terminal<CR>", { silent = true })
+
+-- nx
+vim.keymap.set('n', 'fn',  function() require('nx.actions').actions_finder() end, { silent = true })
+
