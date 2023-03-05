@@ -58,9 +58,6 @@ return {
   -- RustPlay support
   'mattn/webapi-vim',
 
-  -- Go
-  -- 'fatih/vim-go',
-  'ray-x/go.nvim',
 
   -- Optional dependencies
   'nvim-lua/popup.nvim',
@@ -79,23 +76,6 @@ return {
   'theHamsta/nvim-dap-virtual-text',
   'ray-x/guihua.lua',
 
-   -- Tree browser
-   {
-    'kyazdani42/nvim-tree.lua',
-    dependencies = 'kyazdani42/nvim-web-devicons',
-    config = function()
-	    require('nvim-tree').setup({})
-    end
-   },
-
-   -- Comment.nvim
-   {
-    'numToStr/Comment.nvim',
-    config = function()
-        require('Comment').setup()
-    end
-   },
-
    -- nicer UI for notifications
    'rcarriga/nvim-notify',
 
@@ -110,16 +90,6 @@ return {
    -- markdown preview
    {
     'davidgranstrom/nvim-markdown-preview'
-   },
-
-   {
-    'Equilibris/nx.nvim',
-    dependencies = {
-        'nvim-telescope/telescope.nvim',
-    },
-    config = function()
-        require("nx").setup {}
-    end
    },
 
 }

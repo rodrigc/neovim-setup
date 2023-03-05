@@ -15,7 +15,7 @@ return {
       ensure_installed = {
         'lua_ls',
 	'rust_analyzer',
-        'solargraph',
+        -- 'solargraph',
 	'tsserver',
         'ruff_lsp',
 	'terraformls',
