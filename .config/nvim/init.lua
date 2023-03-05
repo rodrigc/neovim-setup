@@ -6,6 +6,8 @@ require('config/treesitter')
 require('completion')
 
 require('config/go')
+require('config/javascript')
+require('config/lua')
 require('config/python')
 require('config/rust')
 require('config/ruby')
