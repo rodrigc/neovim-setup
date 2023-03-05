@@ -28,12 +28,6 @@ return {
   'junegunn/fzf',
   'junegunn/fzf.vim',
 
-  -- Semantic language support
-  -- Collection of common configurations for the Nvim LSP client
-  'williamboman/nvim-lsp-installer',
-  'neovim/nvim-lspconfig',
-  -- Extensions to built-in LSP, for example, providing type inlay hints
-  'nvim-lua/lsp_extensions.nvim',
 
   -- Autocompletion framework
   'hrsh7th/nvim-cmp',
