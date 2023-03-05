@@ -1,9 +1,7 @@
 require('plugins')
 require('config/notify')
 require('config/keybindings')
-require('config/colorscheme')
 require('config/treesitter')
-require('config/lualine')
 
 require('completion')
 
