@@ -1,5 +1,5 @@
 -- NvimTree
-vim.keymap.set('n', '<C-n>', function() require('nvim-tree').toggle(true) end, { silent = true })
+vim.keymap.set('n', '<C-n>', function() require('nvim-tree.api').tree.toggle(true) end, { silent = true })
 
 -- Telescope
 vim.keymap.set('n', 'fb',  function() require('telescope.builtin').buffers() end, { silent = true })

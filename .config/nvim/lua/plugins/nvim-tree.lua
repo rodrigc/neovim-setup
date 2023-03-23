@@ -1,10 +1,13 @@
 return {
  -- Tree browser
  {
-  'kyazdani42/nvim-tree.lua',
-  dependencies = 'kyazdani42/nvim-web-devicons',
+  'nvim-tree/nvim-tree.lua',
+  version = "*",
+  dependencies = {
+    'nvim-tree/nvim-web-devicons',
+  },
   config = function()
-    require('nvim-tree').setup()
+   require('nvim-tree').setup()
   end,
  },
 }
