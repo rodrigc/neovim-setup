@@ -15,3 +15,4 @@ require('config/terraform')
 
 require('config/telescope')
 require('config/options')
+require('config/ale')

@@ -18,9 +18,6 @@ return {
        build = ':TSUpdate'
   },
 
-  -- Asynchronous Linter (ale)
-  'dense-analysis/ale',
-
   -- ncm2 completion manager
   'ncm2/ncm2',
 
