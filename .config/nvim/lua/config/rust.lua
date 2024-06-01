@@ -1,6 +1,7 @@
 -- Rust programming language configuration for neovim
 --
 -- See https://sharksforarms.dev/posts/neovim-rust/
+-- See: https://github.com/mrcjkb/rustaceanvim
 
 -- Set completeopt to have a better completion experience
 -- :help completeopt
@@ -12,23 +13,24 @@ vim.opt.completeopt = {"menuone","noinsert","noselect"}
 -- Avoid showing extra messages when using completion
 vim.opt.shortmess:append('c')
 
-vim.g.rustfmt_options = "--edition 2021"
+--vim.g.rustfmt_options = "--edition 2021"
 
 local lsp = require('config/lsp')
 
+local cfg = require('rustaceanvim.config')
+
 local home = '/Users/crodrigues/'
-local extension_path = home .. '.vscode/extensions/vadimcn.vscode-lldb-1.6.10/'
+local extension_path = home .. '.local/share/nvim/mason/packages/codelldb/'
 local codelldb_path = extension_path .. 'adapter/codelldb'
 local liblldb_path = extension_path .. 'lldb/lib/liblldb.dylib'
 
-local opts = {
+vim.g.rustaceanlocal = {
     tools = { -- rust-tools options
     },
 
     -- debugging stuff
     dap = {
-        adapter = require('rust-tools.dap').get_codelldb_adapter(
-            codelldb_path, liblldb_path)
+        adapter = cfg.get_codelldb_adapter(codelldb_path, liblldb_path)
     },
 
     -- all the opts to send to nvim-lspconfig
@@ -37,25 +39,21 @@ local opts = {
     server = {
         -- on_attach is a callback called when the language server attachs to the buffer
         on_attach = lsp.on_attach,
-        --capabilities = lsp.capabilities,
+        capabilities = lsp.capabilities,
 
         settings = {
             -- to enable rust-analyzer settings visit:
             -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
             ["rust-analyzer"] = {
                 cargo = {
-                    allFeatures = true,
+                    features = "all",
                 },
-                -- enable clippy on save
-                checkOnSave = {
-                    command = "clippy"
-                },
+            -- Add the following line to enable rustfmt on save
+                ["rust-analyzer.rustfmt.overrideCommand"] = { "rustfmt", "--edition", "2021", "--emit=stdout" },
             }
         }
     },
 }
-
-require('rust-tools').setup(opts)
 
 local format_sync_grp = vim.api.nvim_create_augroup("Format", {})
 vim.api.nvim_create_autocmd("BufWritePre", {

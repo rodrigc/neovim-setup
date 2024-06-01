@@ -48,10 +48,11 @@ return {
 
   -- Syntactic language support
   -- Rust
-  -- 'rust-lang/rust.vim',
-  -- To enable more of the features of rust-analyzer, such as inlay hints and more!
-  -- See: https://sharksforarms.dev/posts/neovim-rust/
-  'simrat39/rust-tools.nvim',
+  {
+      'mrcjkb/rustaceanvim',
+      version = '^4',
+      lazy = false,
+  },
   -- RustPlay support
   'mattn/webapi-vim',
 
