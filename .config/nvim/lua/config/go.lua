@@ -1,6 +1,7 @@
-local lsp = require('config/lsp')
-
-require('go').setup({lsp_cfg = true, lsp_on_attach = lsp.on_attach})
+require('go').setup(
+{
+	lsp_cfg = true,
+})
 
 -- Run goimport on save
 vim.api.nvim_create_autocmd("BufWritePre", {
