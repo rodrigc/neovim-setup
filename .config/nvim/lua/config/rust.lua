@@ -53,7 +53,7 @@ vim.g.rustaceanlocal = {
     },
 }
 
-local format_sync_grp = vim.api.nvim_create_augroup("Format", {})
+local format_sync_grp = vim.api.nvim_create_augroup("Format", { clear = false})
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*.rs",
   callback = function()
