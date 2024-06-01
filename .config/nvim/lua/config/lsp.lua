@@ -3,7 +3,8 @@
 -- Taken from: https://github.com/neovim/nvim-lspconfig/blob/master/README.md#keybindings-and-completion
 local on_attach = function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
-  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+  --vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+  vim.api.nvim_set_option_value('omnifunc', 'v:lua.vim.lsp.omnifunc', {buf=bufnr})
 
   -- Mappings.
   local opts = { silent=true }
@@ -25,7 +26,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
   vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
   vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
-  vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, opts)
+  vim.keymap.set('n', '<space>f', vim.lsp.buf.format, opts)
 
   -- Get signatures (and _only_ signatures) when in argument lists.
   --
