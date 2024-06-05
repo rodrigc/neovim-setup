@@ -4,6 +4,7 @@ vim.keymap.set('n', '<C-n>', function() require('nvim-tree.api').tree.toggle(tru
 -- Telescope
 vim.keymap.set('n', 'fb',  function() require('telescope.builtin').buffers() end, { silent = true })
 vim.keymap.set('n', 'ff',  function() require('telescope.builtin').find_files() end, { silent = true })
+vim.keymap.set('n', 'fr',  function() require('telescope.builtin').live_grep() end, { silent = true })
 vim.keymap.set('n', '<Leader>tegf',  function() require('telescope.builtin').git_files() end, { silent = true })
 
 -- Move between Vim Windows
