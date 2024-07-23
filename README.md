@@ -5,7 +5,7 @@ Config files for neovim
 1.  Install neovim v0.5.1+
 2.  Copy the .config/nvim directory from this repository to $HOME/.config/nvim
     directory on your system.
-3.  When starting neovim for the first time, run [:PackerSync](https://github.com/wbthomason/packer.nvim#quickstart) to download and update plugins.
+3.  When starting neovim for the first time, run [:Lazy](https://lazy.folke.io/installation) to download and update plugins.
     Quit neovim, and restart it to load all the plugins.
 
 ## Fonts
@@ -19,10 +19,10 @@ On macOS:
 
 ## Further resources
 * [Desktop and editor setup for Rust development](https://www.youtube.com/watch?v=ycMiMDHopNc)
-* [Neovim and Rust](https://sharksforarms.dev/posts/neovim-rust/)
+* [lazy.nvim modern plugin manager for Neovim.](https://github.com/folke/lazy.nvim)
+* [Neovim and Rust](https://github.com/mrcjkb/rustaceanvim)
 * [Neovim - Convert init.vim to init.lua (Live)](https://www.youtube.com/watch?v=BoDU6QOmEOY)
 * [Getting started using Lua in Neovim](https://github.com/nanotee/nvim-lua-guide)
 * [nvim-treesitter - Tree Sitter in Neovim](https://www.youtube.com/watch?v=LPXH7cBN_u8)
 * [TreeSitter playground](https://tree-sitter.github.io/tree-sitter/playground)
-* [simrat39 dotfiles](https://github.com/simrat39/dotfiles/tree/master/.config/nvim)
 * [Managing Vim Splits](https://www.youtube.com/watch?v=Zir28KFCSQw)
