@@ -1,4 +1,4 @@
-require('plugins')
+require('config/lazy') -- needs to be first in init.lua in order to load plugins
 require('config/notify')
 require('config/keybindings')
 require('config/treesitter')

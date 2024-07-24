@@ -18,6 +18,8 @@ On macOS:
 4.  In iTerm2, `Preferences -> Text -> Use a different font for non-ASCII text -> Fira Nerd Font Mono`
 
 ## Further resources
+* [The Lazy Way in Neovim: From Packer to Lazy.nvim](https://www.youtube.com/watch?v=2ahI8lYUYgw)
+* [LazyVim](https://www.lazyvim.org/installation)
 * [Desktop and editor setup for Rust development](https://www.youtube.com/watch?v=ycMiMDHopNc)
 * [lazy.nvim modern plugin manager for Neovim.](https://github.com/folke/lazy.nvim)
 * [Neovim and Rust](https://github.com/mrcjkb/rustaceanvim)
