@@ -8,3 +8,5 @@ nvim_lsp.tsserver.setup {
       debounce_text_changes = 150,
     }
 }
+
+nvim_lsp.tailwindcss.setup{}

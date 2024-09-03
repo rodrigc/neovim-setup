@@ -17,8 +17,10 @@ return {
 	'rust_analyzer',
         -- 'solargraph',
 	'tsserver',
-        'ruff_lsp',
+        'ruff',
 	'terraformls',
+	'tailwindcss',
+	'cssls',
       }
     }
   end,
