@@ -5,10 +5,10 @@ local ruff_on_attach = function(client, bufnr)
     client.server_capabilities.hoverProvider = false
 end
 
--- Configure `ruff-lsp`.
--- See: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#ruff_lsp
+-- Configure `ruff`.
+-- See: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#ruff
 -- For the default config, along with instructions on how to customize the settings
-nvim_lsp.ruff_lsp.setup {
+nvim_lsp.ruff.setup {
     on_attach = ruff_on_attach,
     flags = {
       debounce_text_changes = 150,
