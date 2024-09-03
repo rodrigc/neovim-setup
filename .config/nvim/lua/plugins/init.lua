@@ -10,9 +10,6 @@ return {
     end
   },
 
-  'folke/which-key.nvim',
-
-  -- nvim-treesitter
   {
        'nvim-treesitter/nvim-treesitter',
        build = ':TSUpdate'
