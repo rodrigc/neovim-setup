@@ -25,3 +25,6 @@ vim.keymap.set('n', '<S-right>', ":vertical resize +2<CR>", { silent = true, des
 
 -- Open terminal inside new window
 vim.keymap.set('n', '<Leader>tt', ":vnew|terminal<CR>", { silent = true, desc = 'open new terminal' })
+
+-- Clipboard
+vim.opt.clipboard = {"unnamed", "unnamedplus"}
