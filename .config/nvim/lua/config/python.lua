@@ -1,5 +1,3 @@
-local nvim_lsp = require('lspconfig')
-
 local ruff_on_attach = function(client, bufnr)
     -- Disable hover in favor of Pyright
     client.server_capabilities.hoverProvider = false
@@ -8,14 +6,16 @@ end
 -- Configure `ruff`.
 -- See: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#ruff
 -- For the default config, along with instructions on how to customize the settings
-nvim_lsp.ruff.setup {
+vim.lsp.config('ruff', {
     on_attach = ruff_on_attach,
     flags = {
       debounce_text_changes = 150,
+      exit_timeout = false,
     }
-}
+})
+vim.lsp.enable('ruff')
 
-nvim_lsp.pyright.setup {
+vim.lsp.config['pyright'] = {
   settings = {
     pyright = {
       -- Using Ruff's import organizer
@@ -29,3 +29,5 @@ nvim_lsp.pyright.setup {
     },
   },
 }
+
+vim.lsp.enable('pyright')

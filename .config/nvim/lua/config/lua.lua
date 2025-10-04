@@ -1,8 +1,7 @@
-local nvim_lsp = require('lspconfig')
-
-nvim_lsp["lua_ls"].setup {
+vim.lsp.config('lua_ls', {
   flags = {
     debounce_text_changes = 150,
+    exit_timeout = false,
   },
   settings = {
     Lua = {
@@ -24,13 +23,6 @@ nvim_lsp["lua_ls"].setup {
       },
     },
   },
-}
+})
 
---local format_sync_grp = vim.api.nvim_create_augroup("Format", { clear = false})
---vim.api.nvim_create_autocmd("BufWritePre", {
---  pattern = "*.lua",
---  callback = function()
---    vim.lsp.buf.format({ timeout_ms = 200 })
---  end,
---  group = format_sync_grp,
---})
+vim.lsp.enable('lua_ls')
