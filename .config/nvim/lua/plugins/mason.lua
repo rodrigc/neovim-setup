@@ -22,6 +22,7 @@ return {
 					'terraformls',
 					'tailwindcss',
 					'cssls',
+					'neocmake',
 				}
 			}
 		end,
