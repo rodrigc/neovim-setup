@@ -47,7 +47,7 @@ return {
   -- Rust
   {
       'mrcjkb/rustaceanvim',
-      version = '^4',
+      version = '^6',
       lazy = false,
   },
   -- RustPlay support
