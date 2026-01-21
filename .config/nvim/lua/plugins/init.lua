@@ -69,12 +69,6 @@ return {
     },
   },
 
-  -- Debugging (needs plenary from above as well) 
-  'mfussenegger/nvim-dap',
-  'rcarriga/nvim-dap-ui',
-  'theHamsta/nvim-dap-virtual-text',
-  'ray-x/guihua.lua',
-
    -- nicer UI for notifications
    'rcarriga/nvim-notify',
 
