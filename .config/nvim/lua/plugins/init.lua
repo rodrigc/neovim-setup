@@ -44,12 +44,6 @@ return {
   'ray-x/lsp_signature.nvim',
 
   -- Syntactic language support
-  -- Rust
-  {
-      'mrcjkb/rustaceanvim',
-      version = '^6',
-      lazy = false,
-  },
   -- RustPlay support
   'mattn/webapi-vim',
 
