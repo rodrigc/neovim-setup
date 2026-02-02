@@ -10,22 +10,29 @@ return {
 	{
 		'williamboman/mason-lspconfig.nvim',
 		lazy = false,
-		config = function()
-			require('mason-lspconfig').setup {
-				ensure_installed = {
-					'lua_ls',
-					'rust_analyzer',
-					-- 'solargraph',
-					-- 'tsserver',
-					'ts_ls',
-					'ruff',
-					'terraformls',
-					'tailwindcss',
-					'cssls',
-					'neocmake',
+		dependencies = {
+			'williamboman/mason.nvim',
+			'neovim/nvim-lspconfig',
+		},
+		opts = {
+			ensure_installed = {
+				'lua_ls',
+				'rust_analyzer',
+				-- 'solargraph',
+				-- 'tsserver',
+				'ts_ls',
+				'ruff',
+				'terraformls',
+				'tailwindcss',
+				'cssls',
+				'neocmake',
+			},
+			automatic_enable = {
+				exclude = {
+					"rust_analyzer"  -- handled by rustacean.nvim
 				}
 			}
-		end,
+		}
 	},
 	{
 		'neovim/nvim-lspconfig',
